@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+} 
+body {
+  background-color: whitesmoke;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.game-container {
+  padding: 20px 30px;
+  position: relative;
+  margin: auto;
+  height: 350px;
+  width: 450px;
+}
+
+.hangman-container {
+  fill: transparent;
+  stroke:black;
+  stroke-width: 6px;
+  stroke-linecap: square;
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 60px;
+}
+
+.hm-part {
+  /* display: none; */
+}
+
+h1 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 100px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+  position: relative;
+  border: none;
+  display:inline-block;
+  padding: 20px 40px;
+  margin: auto;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;;
+}
+
+#resetbtn{
+  margin-top: 50px;
+  display: block;
+}
+#buttonsHolder {
+  left: 50%;
+  display: block;
+}
+
+#answer{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.word {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.letter{
+  border-bottom: 3px solid black;
+  display: inline-flex;
+  font-size: 30px;
+  align-items: center;
+  justify-self: center;
+  margin: 0 3px;
+  height: 50px;
+  width: 20px;
+}
+
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.2);
+  position:fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  height: 170px;
+  text-align: center;
+} 
+
+.resetbtn button {
+  cursor: pointer;
+  border: 0;
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.resetbtn button:active {
+  transform: scale(0.90);
+}
+
+.resetbtn button:focus {
+  outline: 0;
+}
+.kb{
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  padding: 5px 5px;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  width: 40px;
+  height: 60px;
+  background-color: whitesmoke;
+}
+
+.lives {
+  font-size: 50px;
+}
+/*.hangman-container {
+    fill: transparent;
+    stroke: black;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+/* .container {
+    background-color: white;
+    font-size: 25px;
+    width: 100vh;
+    height: 65vw;
+    max-width: 50em;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    padding: 5em;
+    border-radius: 1em;
+} */
+
+
+/* h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+
+ h1 {
+    text-align: center;
+    font-size: 100px;
+} 
+
+
+
+
+/*
+body {
+    background-color: whitesmoke;
+}
+
+#reset {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+}
+
+.hintbtn {
+    width: 50px;
+    margin: auto;
+    display: block;
+    text-align: left;
+}
+
+h2 {
+    display: inline-block;
+    text-align: center;
+    display: inline-block;
+}
+
+#btncategory {
+    display: inline-block;
+    text-align: center;
+}
+
+#guess {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    text-align: left;
+} */ 
+
+ 
+  /* .container {
+    font-size: 16px;
+    background-color: #ffffff;
+    width: 90vw;
+    max-width: 50em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 5em;
+    border-radius: 0.6em;
+    box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
+  } */
+  /* #options-container {
+    text-align: center;
+  }
+  #options-container div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2em 0 2.4em 0;
+  }
+  #options-container button {
+    padding: 0.6em 1.2em;
+    border: 3px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 0.3em;
+    text-transform: capitalize;
+  }
+  #options-container button:disabled {
+    border: 3px solid #808080;
+    color: #808080;
+    background-color: #efefef;
+  }
+  #options-container button.active {
+    background-color: #f4c531;
+    border: 3px solid #000000;
+    color: #000000;
+  }
+  .letter-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6em;
+  }
+  #letter-container button {
+    height: 2.4em;
+    width: 2.4em;
+    border-radius: 0.3em;
+    background-color: #ffffff;
+  }
+  .new-game-popup {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.6em;
+  }
+  
+  #user-input-section {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8em;
+    margin: 0.6em 0 1.2em 0;
+  }
+  canvas {
+    display: block;
+    margin: auto;
+    border: 1px solid #000000;
+  }
+  .hide {
+    display: none;
+  }
+  #result-text h2 {
+    font-size: 1.8em;
+    text-align: center;
+  }
+  #result-text p {
+    font-size: 1.25em;
+    margin: 1em 0 2em 0;
+  }
+  #result-text span {
+    font-weight: 600;
+  }
+  #new-game-button {
+    font-size: 1.25em;
+    padding: 0.5em 1em;
+    background-color: #f4c531;
+    border: 3px solid #000000;
+    color: #000000;
+    border-radius: 0.2em;
+  }
+  .win-msg {
+    color: #39d78d;
+  }
+  .lose-msg {
+    color: #fe5152;
+  } */

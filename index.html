@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css" />
+    
+
+  </head>
+  <body>
+    <h1>Hangman</h1><span class="lives">Lives:6</span>
+
+    <div class="game-container">
+      <svg height="300" width="250" class="hangman-container">
+        <!-- Rod -->
+        <line x1="60" y1="20" x2="140" y2="20"/>
+        <line x1="140" y1="20" x2="140" y2="50"/>
+        <line x1="60" y1="20" x2="60" y2="250"/>
+        <line x1="20" y1="250" x2="100" y2="250"/>
+
+        <!--head-->
+        <circle cx="140" cy="70" r="20" class="hm-part"/>
+        <!--body-->
+        <line x1="140" y1="90" x2="140" y2="150" class="hm-part"/>
+        <!--arms-->
+        <line x1="140" y1="110" x2="120" y2="140" class="hm-part"/>
+        <line x1="140" y1="110" x2="160" y2="140" class="hm-part"/>
+        <!--legs-->
+        <line x1="140" y1="150" x2="120" y2="190" class="hm-part"/>
+        <line x1="140" y1="150" x2="160" y2="190" class="hm-part"/>
+      </svg>
+      <div class="word" id="word"></div>
+    </div>
+
+    <table class="keyBoard">
+      <tr>
+        <td><input class="kb" type="button" value="A"></td>
+        <td><input class="kb" type="button" value="B"></td>
+        <td><input class="kb" type="button" value="C"></td>
+        <td><input class="kb" type="button" value="D"></td>
+        <td><input class="kb" type="button" value="E"></td>
+        <td><input class="kb" type="button" value="F"></td>
+        <td><input class="kb" type="button" value="G"></td>
+        <td><input class="kb" type="button" value="H"></td>
+        <td><input class="kb" type="button" value="I"></td>
+        <td><input class="kb" type="button" value="J"></td>
+        <td><input class="kb" type="button" value="K"></td>
+        <td><input class="kb" type="button" value="L"></td>
+        <td><input class="kb" type="button" value="M"></td>
+      </tr>
+      <tr>
+        <td><input class="kb" type="button" value="N"></td>
+        <td><input class="kb" type="button" value="O"></td>
+        <td><input class="kb" type="button" value="P"></td>
+        <td><input class="kb" type="button" value="Q"></td>
+        <td><input class="kb" type="button" value="R"></td>
+        <td><input class="kb" type="button" value="S"></td>
+        <td><input class="kb" type="button" value="T"></td>
+        <td><input class="kb" type="button" value="U"></td>
+        <td><input class="kb" type="button" value="V"></td>
+        <td><input class="kb" type="button" value="W"></td>
+        <td><input class="kb" type="button" value="X"></td>
+        <td><input class="kb" type="button" value="Y"></td>
+        <td><input class="kb" type="button" value="Z"></td>
+      </tr>
+    </table>
+
+    <!--final message-->
+    <div class="popup-container" id="popup-container">
+      <div class="popup">
+        <h2 id="final-msg"></h2>
+        <button id="resetbtn">Play Again</button>
+      </div>
+    </div>
+
+      <div id="answer"></div> 
+      <div id="buttonsHolder"></div>
+      <div id="keybord"></div>
+
+     <!-- <div id='result'></div>
+     <input id='name' onchange='printName()'/> -->
+    
+    
+
+    <div class="resetbtn">
+      <!-- <button class="resetbtn" id="resetbtn">Play Again</button> -->
+    </div>  
+    <script src="./js/app.js"></script>
+  </body>
+</html>
+
+
